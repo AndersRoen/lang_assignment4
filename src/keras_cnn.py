@@ -4,7 +4,6 @@
 #!pip install nltk beautifulsoup4 contractions tensorflow scikit-learn
 import os
 import sys
-sys.path.append(os.path.join("..", "CDS-LANG"))
 import utils.classifier_utils as clf
 
 # Machine learning stuff
