@@ -1,7 +1,9 @@
 # lang_assignment4
 
+github repo link: https://github.com/AndersRoen/lang_assignment4.git
+
 ## Language analytics assignment 4 description
-Assignment 3 - Text classification
+Assignment 4 - Text classification
 
 We've seen in the past few sessions how text classification works, both from the perspective of classical machine learning and from more contemporary deep learning perspectives. In most cases, we've seen how a simple model like a LogisticRegression Classifier provides a solid benchmark which we can build on using more sophisticated models.
 
