@@ -82,7 +82,7 @@ def pre_process_corpus(docs):
     return norm_docs
 
 def load_preprocess():
-    filepath = os.path.join("..", "..", "..", "CDS-LANG", "toxic", "VideoCommentsThreatCorpus.csv")
+    filepath = os.path.join("in", "VideoCommentsThreatCorpus.csv")
     data = pd.read_csv(filepath)
     data_balanced = clf.balance(data, 1000)
     # now we split the data into training and testing 
