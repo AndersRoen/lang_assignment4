@@ -1,7 +1,6 @@
 # system tools
 import os
 import sys
-sys.path.append(os.path.join("..", "CDS-LANG"))
 import argparse
 
 # data munging tools
@@ -28,7 +27,7 @@ if not sys.warnoptions:
 # warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 def load_data(): #load the data and balance it
-    filepath = os.path.join("..", "CDS-LANG", "toxic", "VideoCommentsThreatCorpus.csv")
+    filepath = os.path.join("in", "VideoCommentsThreatCorpus.csv")
     data = pd.read_csv(filepath)
     # balancing the data
     data_balanced = clf.balance(data, 1000)
@@ -61,7 +60,7 @@ def classify_predict(X_train_feats, y_train, X_test_feats, y_test, rep_name):
     y_pred = classifier.predict(X_test_feats)
     cl_report = metrics.classification_report(y_test, y_pred, output_dict = True)
     report_df = df = pd.DataFrame(cl_report).transpose()
-    outpath = ("outputs")
+    outpath = ("out")
     report_df.to_csv(os.path.join(outpath, rep_name))
     return report_df
 
