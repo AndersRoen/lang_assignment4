@@ -34,11 +34,11 @@ First, you must put the corpus into the ```in``` folder, which you can find here
 Then, run the ```setup_lang.sh``` script.
 The ```logistic_regression.py``` script is quite simple. To run it, point the command line to the ```lang_assignment4``` folder and run the script from the ```src``` folder. The only command line argument you need to include is ```-rp``` which is the name you will give the classification report, for instance ```classification_rep.csv```.
 The ```keras_cnn.py``` has more command line arguments:
-```-rp``` which is the same as the ```logistic_regression.py``` argument.
-```-em``` which is the size of the embedding layer. I've used 256 
-```-e``` which is the amount of epochs. I've used 10
-```b``` which is the batch size of the model. I've used 128
-```lr``` which is the learning rate of the model. I've used 0.001, which seems to be the recommended value for the ```adam``` optimizer.
+ - ```-rp``` which is the same as the ```logistic_regression.py``` argument.
+ -  ```-em``` which is the size of the embedding layer. I've used 256 
+ - ```-e``` which is the amount of epochs. I've used 10
+ - ```b``` which is the batch size of the model. I've used 128
+ - ```lr``` which is the learning rate of the model. I've used 0.001, which seems to be the recommended value for the ```adam``` optimizer.
 
 ## Results
 Fairly unsurprisingly, the cnn performs quite a bit better than the logistic regression classifier. This just shows how powerful a tool neural networks can be when working with language. That being said, the cnn also takes quite a bit longer to run. In this case, the amount of text isn't huge, but if one were working with a larger dataset, it could take a long time to run such a model, especially if one didn't have access to a super-computer like we do.
